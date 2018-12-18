@@ -16,8 +16,23 @@ query{
 
 #cria um evento
 mutation {
-  createEvent(eventInput: {title: "A teste", description: "A description", price: 9.99, date: "2018-12-10T18:20:17.986Z"}) {
+  createEvent(eventInput: {
+    title: "Test",
+    description: "A description test",
+    price: 9.99,
+    date: "2018-12-18T14:58:53.346Z"
+  }) 
+  {
     title
-    description
+  	description
+  }
+  
+}
+
+#cria um usuário
+mutation {
+  createUser(userInput: {email: "teste@teste.com", password:"teste"}) {
+    email
+    password
   }
 }
