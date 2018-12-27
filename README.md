@@ -3,30 +3,32 @@
 npm install para dependências
 npm start para rodar o projeto
 
+#database
+use https://cloud.mongodb.com/user#/atlas/login para criar um cluster 
+
 #EndPoint para usar query
 http://localhost:3000/graphql
 
 #retorna eventos
-query{
+{
   events {
     title
+    price
     description
+    creator {
+      email
+    }
   }
 }
 
+
 #cria um evento
 mutation {
-  createEvent(eventInput: {
-    title: "Test",
-    description: "A description test",
-    price: 9.99,
-    date: "2018-12-18T14:58:53.346Z"
-  }) 
-  {
-    title
-  	description
+  createEvent(eventInput: {title: "OUtro evento", description: "A description test 5", price: 9.99, date: "2018-11-18T14:58:53.346Z"}) {
+    creator {
+      email
+    }
   }
-  
 }
 
 #cria um usuário
