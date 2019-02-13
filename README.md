@@ -11,12 +11,38 @@ http://localhost:3000/graphql
 
 #retorna eventos
 query {
+  events{
+    title
+    creator{
+      email
+      createdEvents{
+        _id
+      }
+    }
+  }
+}
+
+query {
   events {
     title
     price
     description
     creator {
       email
+    }
+  }
+}
+
+query {
+  events {
+    _id
+    title
+    date
+    creator{
+      email
+      createdEvents{
+        title
+      }
     }
   }
 }
