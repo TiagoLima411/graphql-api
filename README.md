@@ -10,7 +10,7 @@ use https://cloud.mongodb.com/user#/atlas/login para criar um cluster
 http://localhost:3000/graphql
 
 #retorna eventos
-{
+query {
   events {
     title
     price
@@ -21,6 +21,17 @@ http://localhost:3000/graphql
   }
 }
 
+#retorna bookings
+query {
+  bookings {
+    event{
+      title
+      creator{
+        email
+      }
+    }
+  }
+}
 
 #cria um evento
 mutation {
@@ -36,5 +47,16 @@ mutation {
   createUser(userInput: {email: "teste@teste.com", password:"teste"}) {
     email
     password
+  }
+}
+
+#cria um bookEvent
+mutation {
+  bookEvent(eventId: "5c61daef497f1832b1a3e0a0"){
+    _id
+    createdAt
+    user{
+      email
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
     "env": {
-        "MONGO_USER": "username",
-        "MONGO_PASSWORD": "password",
-        "MONGO_DB": "databasename" 
+        "MONGO_USER": "tiago",
+        "MONGO_PASSWORD": "XT3ds121Ls7V0jJh",
+        "MONGO_DB": "graphql-dev" 
     }
 }
