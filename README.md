@@ -76,6 +76,21 @@ mutation {
   }
 }
 
+#loga usuario
+query {
+  login(email:"teste@teste", password: "teste") {
+    userId
+    token
+    tokenExpiration
+  }
+}
+
+#caso esteja usando o Postman
+{
+	"query": "query { login(email:\"teste@teste\", password: \"teste\") { token } }"
+}
+
+
 #cria um bookEvent
 mutation {
   bookEvent(eventId: "5c61daef497f1832b1a3e0a0"){
